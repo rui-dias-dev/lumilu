@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import MainNav from './MainNav';
 import MobileNav from './MobileNav';
 
-const Headers: FC = () => {
+const Header: FC = () => {
   return (
     <header className="border-grid sticky top-0 z-50 mt-12 w-full backdrop-blur md:mt-14">
       <div className="container-wrapper">
@@ -16,4 +16,4 @@ const Headers: FC = () => {
   );
 };
 
-export default Headers;
+export default Header;
