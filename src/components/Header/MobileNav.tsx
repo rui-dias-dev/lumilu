@@ -33,9 +33,12 @@ const MobileNav: FC = () => {
       </div>
       <DrawerTitle></DrawerTitle>
 
-      <DrawerContent className="max-h-[80svh] p-0">
+      <DrawerContent className="h-1/2 max-h-[80svh] p-0">
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-3">
+            <MobileLink href={'/'} onOpenChange={setOpen}>
+              Home
+            </MobileLink>
             <MobileLink href={'/shop'} onOpenChange={setOpen}>
               Shop
             </MobileLink>

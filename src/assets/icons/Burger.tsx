@@ -1,4 +1,3 @@
-// src/assets/icons/Burger.tsx
 import * as React from 'react';
 
 export default function Burger(props: React.SVGProps<SVGSVGElement>) {

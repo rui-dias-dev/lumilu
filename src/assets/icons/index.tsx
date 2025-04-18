@@ -8,3 +8,7 @@ export { default as Seaweed } from './Seaweed';
 export { default as Shell } from './Shell';
 export { default as Sun } from './Sun';
 export { default as Logo } from './Logo';
+export { default as ShellWithWaves } from './ShellWithWaves';
+export { default as SunAndLines } from './SunAndLines';
+export { default as Burger } from './Burger';
+export { default as Facebook } from './Facebook';

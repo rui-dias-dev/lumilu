@@ -13,7 +13,7 @@ export default function Instagram(props: React.SVGProps<SVGSVGElement>) {
     >
       <defs>
         <style>{`
-          #InstagramSVG .st0 { fill: #bfc57e; }
+          #InstagramSVG .st0 { fill: currentcolor; }
         `}</style>
       </defs>
       <path
