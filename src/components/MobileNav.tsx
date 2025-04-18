@@ -1,8 +1,8 @@
 'use client';
 import { FC, useCallback, useState } from 'react';
-import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from '../ui/drawer';
-import { Button } from '../ui/button';
-import MobileLink from '../MobileLink';
+import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from './ui/drawer';
+import { Button } from './ui/button';
+import MobileLink from './MobileLink';
 import { Cart, Logo } from '@/assets/icons';
 import Burger from '@/assets/icons/Burger';
 import Link from 'next/link';

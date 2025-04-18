@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import SubscribeForm from './Forms/SubscribeForm';
+import SubscribeForm from './SubscribeForm';
 
 const SubscribeSection: FC = ({}) => {
   return (
