@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HeroSection className="my-20 md:my-0 md:mt-52" />
-      <CollectionSlider className="mt-28" />
+      <CollectionSlider className="md:mt-28" />
       <SubscribeSection />
       <ThankYouSection />
       <TowelsSection />

@@ -2,19 +2,19 @@
 
 import React, { useState, useEffect, useCallback, ComponentProps } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 import { Slider } from '@/components/ui/slider';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 import type { CarouselApi } from './ui/carousel';
 import AlgarveCollection from '@/assets/icons/AlgarveCollection';
 
-import img01 from '@/assets/images/home/carousel/HOME-01.png';
-import img02 from '@/assets/images/home/carousel/HOME-02.png';
-import img03 from '@/assets/images/home/carousel/HOME-03.png';
-import img04 from '@/assets/images/home/carousel/HOME-04.png';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
-
-const images = [img01, img02, img03, img04];
+const images = [
+  '/images/home/carousel/HOME-01.png',
+  '/images/home/carousel/HOME-02.png',
+  '/images/home/carousel/HOME-03.png',
+  '/images/home/carousel/HOME-04.png',
+];
 const SLIDE_COUNT = images.length;
 
 type CollectionSliderProps = ComponentProps<'section'>;
@@ -51,11 +51,11 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
 
   return (
     <section className={cn('w-full pb-20', className)} {...props}>
-      <Carousel opts={{ align: 'start', dragFree: true }} setApi={setEmblaApi} className="">
+      <Carousel opts={{ align: 'start', dragFree: true }} setApi={setEmblaApi}>
         <CarouselContent>
           {images.map((src, idx) => (
             <CarouselItem key={idx} className="basis-1/2 md:basis-[30%]">
-              <Link href={'/'}>
+              <Link href="/" className="block">
                 <div className="relative h-48 p-1 md:h-[446px]">
                   <Image src={src} alt={`Slide ${idx + 1}`} fill className="object-contain" quality={90} />
                 </div>
@@ -66,7 +66,7 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
       </Carousel>
 
       <AlgarveCollection className="m-auto mt-10 md:hidden" />
-      <AlgarveCollection height={45} width={425} className="m-auto mt-28 hidden h-full md:block" />
+      <AlgarveCollection width={425} height={45} className="m-auto mt-28 hidden md:block" />
 
       <div className="mt-4 flex w-full justify-center px-4 md:mt-12">
         <Slider

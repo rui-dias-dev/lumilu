@@ -31,7 +31,7 @@ const FooterDesktop: FC = ({}) => {
             <Link href={'/'}>
               <Instagram width={46} height={46} />
             </Link>
-            <Link href={'/terms-and-conditions'} className="mt-5 text-sm uppercase">
+            <Link href={'/faq'} className="mt-5 text-sm uppercase">
               FAQ
             </Link>
           </div>

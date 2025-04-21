@@ -48,6 +48,12 @@ const MobileNav: FC = () => {
             <MobileLink href={'/contact'} onOpenChange={setOpen}>
               Contact
             </MobileLink>
+            <MobileLink href={'/terms-and-conditions'} onOpenChange={setOpen}>
+              Terms and Conditions
+            </MobileLink>
+            <MobileLink href={'/faq'} onOpenChange={setOpen}>
+              FAQ
+            </MobileLink>
           </div>
         </div>
       </DrawerContent>
