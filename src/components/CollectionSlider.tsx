@@ -1,21 +1,31 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, ComponentProps } from 'react';
+import Image from 'next/image';
 import { Slider } from '@/components/ui/slider';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
-import { Card, CardContent } from '@/components/ui/card';
 import type { CarouselApi } from './ui/carousel';
 import AlgarveCollection from '@/assets/icons/AlgarveCollection';
 
-const SLIDE_COUNT = 4;
+import img01 from '@/assets/images/home/carousel/HOME-01.png';
+import img02 from '@/assets/images/home/carousel/HOME-02.png';
+import img03 from '@/assets/images/home/carousel/HOME-03.png';
+import img04 from '@/assets/images/home/carousel/HOME-04.png';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
-const CollectionSlider: React.FC = () => {
+const images = [img01, img02, img03, img04];
+const SLIDE_COUNT = images.length;
+
+type CollectionSliderProps = ComponentProps<'section'>;
+
+const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props }) => {
   const [emblaApi, setEmblaApi] = useState<CarouselApi | null>(null);
   const [progress, setProgress] = useState(0);
 
   const onScroll = useCallback((api: CarouselApi) => {
     if (api?.scrollProgress) {
-      const p = Math.max(0, Math.min(1, api?.scrollProgress()));
+      const p = Math.max(0, Math.min(1, api.scrollProgress()));
       setProgress(p * 100);
     }
   }, []);
@@ -25,8 +35,6 @@ const CollectionSlider: React.FC = () => {
     emblaApi.on('reInit', onScroll);
     emblaApi.on('scroll', onScroll);
     emblaApi.on('select', onScroll);
-
-    // initialize
     onScroll(emblaApi);
     return () => {
       emblaApi.off('reInit', onScroll);
@@ -42,36 +50,35 @@ const CollectionSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full pb-20">
+    <section className={cn('w-full pb-20', className)} {...props}>
       <Carousel opts={{ align: 'start', dragFree: true }} setApi={setEmblaApi} className="">
         <CarouselContent>
-          {Array.from({ length: SLIDE_COUNT }).map((_, index) => (
-            <CarouselItem key={index} className="basis-1/2 md:h-48 md:basis-1/3">
-              <div className="h-full p-1">
-                <Card className="h-full">
-                  <CardContent className="flex h-full items-center justify-center p-6">
-                    <span className="text-3xl font-semibold">{index + 1}</span>
-                  </CardContent>
-                </Card>
-              </div>
+          {images.map((src, idx) => (
+            <CarouselItem key={idx} className="basis-1/2 md:basis-[30%]">
+              <Link href={'/'}>
+                <div className="relative h-48 p-1 md:h-[446px]">
+                  <Image src={src} alt={`Slide ${idx + 1}`} fill className="object-contain" quality={90} />
+                </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
 
-      <AlgarveCollection className="m-auto mt-10" />
+      <AlgarveCollection className="m-auto mt-10 md:hidden" />
+      <AlgarveCollection height={45} width={425} className="m-auto mt-28 hidden h-full md:block" />
 
-      <div className="mt-4 flex w-full justify-center px-4">
+      <div className="mt-4 flex w-full justify-center px-4 md:mt-12">
         <Slider
           min={0}
           max={100}
           step={1}
           value={[progress]}
           onValueChange={onSliderChange}
-          className="h-4 w-[136px]"
+          className="h-4 w-[136px] md:h-10 md:w-[359px]"
         />
       </div>
-    </div>
+    </section>
   );
 };
 
