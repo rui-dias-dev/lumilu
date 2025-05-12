@@ -22,7 +22,9 @@ const ProductsList: FC = () => {
           <div className="text-center">
             <span>{product.name}</span>
             <span> | </span>
-            <span className="text-sm font-bold">{formatPrice(product.price.amount, product.price.currency)}</span>
+            <span className="text-sm font-bold">
+              {formatPrice({ amount: product.price.amount, currency: product.price.currency })}
+            </span>
           </div>
         </Link>
       ))}

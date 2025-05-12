@@ -6,6 +6,7 @@ export interface Product {
   collection: string;
   slug: string;
   description: string;
+  bgColor: string;
   images: { src: string; alt: string }[];
   dimensions: {
     lengthCm: number;
@@ -39,6 +40,7 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'lua-algarve',
     description: `This minimalist and organic yoga mat is inspired by Portugal’s natural beauty, features elements of water and the moon’s cycle, symbolizing balance, renewal, and transformation. Designed for those seeking a deeper connection to nature and mindfulness, it blends art, spirituality, and function to enhance any yoga or meditation practice. With its soothing, grounding energy, this mat is particularly well‑suited for both Pitta and Vata personalities. The moon’s calming influence helps balance Pitta’s intensity while offering stability and relaxation to Vata’s restless nature, making it ideal for those looking to cultivate tranquility, intuition, and harmony in their practice.`,
+    bgColor: '#5C6A9A',
     images: [
       { src: '/images/home/carousel/HOME-01.png', alt: 'Lua Mat – top view' },
       { src: '/images/home/carousel/HOME-02.png', alt: 'Lua Mat – detail view' },
@@ -96,6 +98,7 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'flor-algarve',
     description: `Inspired by the traditions of beekeeping and the harmony between honeybees and flowers, this minimalist and organic yoga mat symbolizes connection, renewal, and the natural flow of energy. The design balances grounded stability with gentle transformation, making it perfect for those seeking mindfulness, creativity, and a deeper connection to nature in their practice. With its warm, nurturing aesthetic, this mat encourages a sense of harmony and flow in every movement. It is especially beneficial for Vata personalities, offering grounding and balance, while also supporting Pitta by promoting calm and emotional equilibrium.`,
+    bgColor: '#B9B9DA',
     images: [
       { src: '/images/home/carousel/FLOR-01.png', alt: 'Flor Mat – top view' },
       { src: '/images/home/carousel/FLOR-02.png', alt: 'Flor Mat – detail view' },
@@ -153,6 +156,7 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'sol-algarve',
     description: `Inspired by the warmth of the sunset, this yoga mat captures the essence of the earth’s natural energy, symbolizing vitality, renewal, and grounded connection. The design evokes the calming glow of the setting sun and the nourishing presence of seaweed, creating a perfect balance of energy and stability. Ideal for those seeking a harmonious and rejuvenating practice, it encourages a deep connection to nature, bringing a sense of vitality and renewal to every movement. It is especially beneficial for Kapha personalities, as its energizing qualities stimulate motivation and transformation, counteracting Kapha’s tendency toward stagnation. It also supports Vata types by offering nourishing and grounding energy to promote stability and calm.`,
+    bgColor: '#DCA2AC',
     images: [
       { src: '/images/home/carousel/SOL-01.png', alt: 'Sol Mat – top view' },
       { src: '/images/home/carousel/SOL-02.png', alt: 'Sol Mat – detail view' },
@@ -209,6 +213,7 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'praia-algarve',
     description: `Inspired by the playful charm of coastal beach towns, this yoga mat captures a sense of lightness, joy, and renewal. The flowing lines and ice cream–colored palette evoke the carefree spirit of summer by the sea, symbolizing ease, movement, and a deep connection to simple pleasures. Designed for those who seek a refreshing and uplifting practice, it encourages a sense of fluidity and relaxation, making every movement feel effortless and free. This mat is especially suited for Pitta personalities, as its cooling and soothing qualities help to soften intensity and bring balance. It also benefits Kapha types by adding a touch of playfulness and lightness, encouraging movement and renewal.`,
+    bgColor: '#B4E1C2',
     images: [
       { src: '/images/home/carousel/PRAIA-01.png', alt: 'Praia Mat – top view' },
       { src: '/images/home/carousel/PRAIA-02.png', alt: 'Praia Mat – detail view' },
