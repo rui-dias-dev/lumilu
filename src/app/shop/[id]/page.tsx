@@ -2,7 +2,6 @@ import { products } from '@/data/products';
 import { formatPrice } from '@/lib/formatters';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import React, { FC } from 'react';
 import { Fish } from '@/assets/icons';
 import { Button } from '@/components/ui/button';
 import FeaturesAndCare from '@/components/FeaturesAndCare';
@@ -11,21 +10,23 @@ import Sustainable from '@/components/Sustainable';
 import YouMayLike from '@/components/YouMayLike';
 import ProductCarousel from '@/components/ProductCarousel';
 
-interface ProductPageProps {
-  params: {
-    id: string;
-  };
+interface Params {
+  id: string;
 }
 
-const ProductPage: FC<ProductPageProps> = ({ params: { id } }) => {
-  const product = products.find((product) => product.id === id);
-  if (!product) {
-    notFound();
-  }
+export default async function ProductPage({ params }: { params: Promise<Params> }) {
+  const { id } = await params;
 
-  const price = formatPrice({ amount: product.price.amount, currency: product.price.currency });
+  const product = products.find((p) => p.id === id);
+  if (!product) notFound();
+
+  const price = formatPrice({
+    amount: product.price.amount,
+    currency: product.price.currency,
+  });
+
   return (
-    <div className={`text-white`}>
+    <div className="text-white">
       <section className="rounded-b-[150px] pt-10 pb-10 text-center" style={{ backgroundColor: product.bgColor }}>
         <h1 className="mb-7 px-14 text-xl">
           <strong>{product.name}</strong> | {product.collection}
@@ -35,8 +36,8 @@ const ProductPage: FC<ProductPageProps> = ({ params: { id } }) => {
 
         <div className="mt-6 px-14">
           <p>
-            {product.dimensions.lengthCm} X {product.dimensions.widthCm} CM | {product.dimensions.thicknessMm}MM |{' '}
-            {product.dimensions.weightKg}KG
+            {product.dimensions.lengthCm} X {product.dimensions.widthCm} CM | {product.dimensions.thicknessMm} MM |{' '}
+            {product.dimensions.weightKg} KG
           </p>
           <p className="font-bold">{price}</p>
           <Fish width={80} height={71} />
@@ -50,6 +51,4 @@ const ProductPage: FC<ProductPageProps> = ({ params: { id } }) => {
       <YouMayLike />
     </div>
   );
-};
-
-export default ProductPage;
+}
