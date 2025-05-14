@@ -4,7 +4,7 @@ import MainNav from './MainNav';
 
 const Header: FC = () => {
   return (
-    <header className="bg-cream sticky top-0 z-50 mt-12 w-full md:mt-14">
+    <header className="bg-cream sticky top-0 z-50 w-full py-6 md:pt-14">
       <MobileNav />
       <MainNav />
     </header>

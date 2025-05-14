@@ -8,14 +8,10 @@ import { Slider } from '@/components/ui/slider';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 import type { CarouselApi } from './ui/carousel';
 import AlgarveCollection from '@/assets/icons/AlgarveCollection';
+import { home } from '@/data/home';
+import { Wave } from '@/assets/icons';
 
-const images = [
-  '/images/home/carousel/HOME-01.png',
-  '/images/home/carousel/HOME-02.png',
-  '/images/home/carousel/HOME-03.png',
-  '/images/home/carousel/HOME-04.png',
-];
-const SLIDE_COUNT = images.length;
+const SLIDE_COUNT = home.carousel.length;
 
 type CollectionSliderProps = ComponentProps<'section'>;
 
@@ -50,14 +46,15 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
   };
 
   return (
-    <section className={cn('w-full pb-20', className)} {...props}>
+    <section className={cn('bg-green relative w-full pt-12 pb-20', className)} {...props}>
+      <Wave className="absolute top-0 -translate-y-1/2" />
       <Carousel opts={{ align: 'start', dragFree: true }} setApi={setEmblaApi}>
         <CarouselContent>
-          {images.map((src, idx) => (
-            <CarouselItem key={idx} className="basis-1/2 md:basis-[30%]">
-              <Link href="/" className="block">
-                <div className="relative h-48 p-1 md:h-[446px]">
-                  <Image src={src} alt={`Slide ${idx + 1}`} fill className="object-contain" quality={90} />
+          {home.carousel.map(({ link: { href }, image: { src, alt } }, index) => (
+            <CarouselItem key={index} className="basis-[80%] md:basis-[30%]">
+              <Link href={href} className="block">
+                <div className="relative h-[355px] p-1 md:h-[446px]">
+                  <Image src={src} alt={alt} fill className="object-contain" quality={90} />
                 </div>
               </Link>
             </CarouselItem>
@@ -65,8 +62,8 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
         </CarouselContent>
       </Carousel>
 
-      <AlgarveCollection className="m-auto mt-10 md:hidden" />
-      <AlgarveCollection width={425} height={45} className="m-auto mt-28 hidden md:block" />
+      <AlgarveCollection className="m-auto mt-10 text-white md:hidden" />
+      <AlgarveCollection width={425} height={45} className="m-auto mt-28 hidden text-white md:block" />
 
       <div className="mt-4 flex w-full justify-center px-4 md:mt-12">
         <Slider

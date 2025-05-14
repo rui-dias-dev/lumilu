@@ -13,7 +13,7 @@ export default function Logo(props: React.SVGProps<SVGSVGElement>) {
     >
       <defs>
         <style>{`
-          #LogoSVG .st0 { fill: #BFC57E; }
+          #LogoSVG .st0 { fill: currentColor; }
         `}</style>
       </defs>
       <path

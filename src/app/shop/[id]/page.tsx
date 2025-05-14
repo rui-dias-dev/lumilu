@@ -1,6 +1,5 @@
 import { products } from '@/data/products';
 import { formatPrice } from '@/lib/formatters';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Fish } from '@/assets/icons';
 import { Button } from '@/components/ui/button';
@@ -10,6 +9,11 @@ import Sustainable from '@/components/Sustainable';
 import YouMayLike from '@/components/YouMayLike';
 import ProductCarousel from '@/components/ProductCarousel';
 
+export function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id,
+  }));
+}
 interface Params {
   id: string;
 }
@@ -26,13 +30,20 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
   });
 
   return (
-    <div className="text-white">
+    <div className={`text-white ${product.classnames.background ? product.classnames.background : ''}`}>
       <section className="rounded-b-[150px] pt-10 pb-10 text-center" style={{ backgroundColor: product.bgColor }}>
         <h1 className="mb-7 px-14 text-xl">
           <strong>{product.name}</strong> | {product.collection}
         </h1>
-        <ProductCarousel />
-        <p>{product.description}</p>
+        <ProductCarousel product={product} />
+        <div className="mt-6 space-y-4 px-14">
+          {product.description.length &&
+            product.description.map((paragraph) => (
+              <p key={paragraph} className="text-center">
+                {paragraph}
+              </p>
+            ))}
+        </div>
 
         <div className="mt-6 px-14">
           <p>
@@ -47,7 +58,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
 
       <FeaturesAndCare className="mt-8 text-center text-black" />
       <CareInstructions className="mt-10 px-14" />
-      <Sustainable className="mt-8 px-14" style={{ backgroundColor: product.bgColor }} />
+      <Sustainable className="mt-8" product={product} style={{ backgroundColor: product.bgColor }} />
       <YouMayLike />
     </div>
   );

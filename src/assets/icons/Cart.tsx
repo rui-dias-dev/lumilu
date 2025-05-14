@@ -16,7 +16,7 @@ export default function Cart(props: React.SVGProps<SVGSVGElement>) {
         <style>{`
           #CartSVG .st0 { fill: #EDC700; }
           #CartSVG .st1 { fill: #EDE6DB; }
-          #CartSVG .st2 { fill: #BFC57E; }
+          #CartSVG .st2 { fill: currentColor; }
         `}</style>
       </defs>
       <path

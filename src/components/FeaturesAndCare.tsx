@@ -32,9 +32,10 @@ const FeaturesAndCare: FC<FeaturesAndCareProps> = ({ className, ...props }) => {
       <Image
         src={'/images/product/layers-mobile.png'}
         width={412}
-        height={495}
+        height={315}
         alt="layers"
-        className="ml-auto h-[400px] object-cover md:hidden"
+        quality={100}
+        className="my-8 ml-auto w-full object-cover md:hidden"
       />
       <Image
         src={'/images/product/layers.png'}

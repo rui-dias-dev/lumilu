@@ -4,7 +4,6 @@ import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from './ui/drawer';
 import { Button } from './ui/button';
 import MobileLink from './MobileLink';
 import { Cart, Logo } from '@/assets/icons';
-import Burger from '@/assets/icons/Burger';
 import Link from 'next/link';
 
 const MobileNav: FC = () => {
@@ -26,7 +25,11 @@ const MobileNav: FC = () => {
             variant="ghost"
             className="hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
           >
-            <Burger width={20} height={10} />
+            <div className="grid gap-[3px]">
+              <div className="h-[3px] w-5 rounded-full bg-current"></div>
+              <div className="h-[3px] w-5 rounded-full bg-current"></div>
+              <div className="h-[3px] w-5 rounded-full bg-current"></div>
+            </div>
             <span className="sr-only">Toggle Menu</span>
           </Button>
         </DrawerTrigger>

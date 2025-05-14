@@ -13,3 +13,4 @@ export { default as ShellWithWaves } from './ShellWithWaves';
 export { default as SunAndLines } from './SunAndLines';
 export { default as Burger } from './Burger';
 export { default as Facebook } from './Facebook';
+export { default as Wave } from './Wave';

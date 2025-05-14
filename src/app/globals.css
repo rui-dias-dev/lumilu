@@ -44,6 +44,11 @@
   --color-cream: var(--cream);
   --color-green: var(--green);
   --color-yellow: var(--yellow);
+
+  --color-flor: var(--flor);
+  --color-sol: var(--sol);
+  --color-lua: var(--lua);
+  --color-praia: var(--praia);
 }
 
 :root {
@@ -79,9 +84,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
   --cream: #eee5d9;
   --green: #bdc474;
   --yellow: #f4c400;
+  --flor: #B9B9DA;
+  --sol: #DCA2AC;
+  --lua: #5C6A9A;
+  --praia: #B4E1C2;
 }
 
 .dark {
@@ -122,7 +132,48 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body>header {
+  color: var(--green);
+}
+
+body:has(.flor)>header {
+  background: var(--flor);
+  color: white;
+}
+
+body:has(.lua)>header {
+  background: var(--lua);
+  color: white;
+}
+
+body:has(.praia)>header {
+  background: var(--praia);
+  color: white;
+}
+
+body:has(.sol)>header {
+  background: var(--sol);
+  color: white;
+}
+
+body .flor {
+  color: black;
+}
+
+body .lua {
+  color: white;
+}
+
+body .praia {
+  color: black;
+}
+
+body .sol {
+  color: white;
 }
