@@ -177,3 +177,37 @@ body .praia {
 body .sol {
   color: white;
 }
+
+
+.product-title {
+  grid-area: title;
+}
+
+.product-gallery {
+  grid-area: gallery;
+}
+
+.product-description {
+  grid-area: description;
+}
+
+.product-variables {
+  grid-area: variables;
+}
+
+.product-buy-button {
+  grid-area: buy-button;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-section {
+    grid-template-columns: 557px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      "gallery title"
+      "gallery description"
+      "gallery variables"
+      "buy-button .";
+    ;
+  }
+}

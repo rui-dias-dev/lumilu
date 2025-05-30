@@ -3,8 +3,8 @@ import React, { FC } from 'react';
 
 const ThankYouSection: FC = ({}) => {
   return (
-    <section className="p-14 text-center md:grid md:grid-cols-12 md:gap-2.5 md:px-48">
-      <div className="col-start-2 col-end-11">
+    <section className="p-14 text-center lg:grid lg:grid-cols-12 lg:gap-2.5 lg:px-48">
+      <div className="m-auto text-lg lg:col-start-3 lg:col-end-11 lg:max-w-[705px]">
         <p>
           At Lumilu, everything is created with passion, purpose, and attention to detail. As a small, independent
           company, with no investors’ obligations, we enjoy complete freedom of always selecting natural materials and
