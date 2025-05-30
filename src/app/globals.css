@@ -88,10 +88,10 @@
   --cream: #eee5d9;
   --green: #bdc474;
   --yellow: #f4c400;
-  --flor: #B9B9DA;
-  --sol: #DCA2AC;
-  --lua: #5C6A9A;
-  --praia: #B4E1C2;
+  --flor: #b9b9da;
+  --sol: #dca2ac;
+  --lua: #5c6a9a;
+  --praia: #b4e1c2;
 }
 
 .dark {
@@ -147,7 +147,8 @@ body:has(.flor)>header {
   color: white;
 }
 
-body:has(.lua)>header {
+body:has(.lua)>header,
+body:has(.shop)>header {
   background: var(--lua);
   color: white;
 }
@@ -178,7 +179,7 @@ body .sol {
   color: white;
 }
 
-
+/* Product */
 .product-title {
   grid-area: title;
 }
@@ -199,15 +200,56 @@ body .sol {
   grid-area: buy-button;
 }
 
+/* Features and care */
+.features-and-care .title {
+  grid-area: title;
+}
+
+.features-and-care .antibacterial {
+  grid-area: antibacterial;
+}
+
+.features-and-care .soft {
+  grid-area: soft;
+}
+
+.features-and-care .natural {
+  grid-area: natural;
+}
+
+.features-and-care .printing {
+  grid-area: printing;
+}
+
+.features-and-care .non-toxic {
+  grid-area: non-toxic;
+}
+
+.features-and-care .feature-image {
+  grid-area: image;
+}
+
 @media screen and (min-width: 1024px) {
+
+  /* Product */
   .product-section {
     grid-template-columns: 557px 1fr;
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas:
-      "gallery title"
-      "gallery description"
-      "gallery variables"
-      "buy-button .";
-    ;
+      'gallery title'
+      'gallery description'
+      'gallery variables'
+      'buy-button .';
+  }
+
+  /* Features and care */
+  .features-and-care {
+    grid-template-areas:
+      'title title'
+      'antibacterial image'
+      'soft image'
+      'natural image'
+      'printing image'
+      'non-toxic image';
   }
 }

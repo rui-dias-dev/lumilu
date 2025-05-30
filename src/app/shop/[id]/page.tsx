@@ -31,7 +31,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
   return (
     <div className={`text-white ${product.classnames.background ? product.classnames.background : ''}`}>
       <section
-        className="product-section rounded-b-[150px] pt-10 pb-10 text-center lg:grid lg:gap-x-16 lg:rounded-none lg:px-32 lg:text-left xl:px-48"
+        className="product-section rounded-b-[150px] pt-10 pb-10 text-center lg:grid lg:gap-x-16 lg:rounded-b-[250px] lg:px-32 lg:text-left xl:px-48"
         style={{ backgroundColor: product.bgColor }}
       >
         <h1 className="product-title mb-7 px-14 text-xl lg:mb-0 lg:px-0">
@@ -60,8 +60,8 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
         </Button>
       </section>
 
-      <FeaturesAndCare className="mt-8 text-center text-black" />
-      <CareInstructions className="mt-10 px-14" />
+      <FeaturesAndCare className="mt-8 text-center text-black lg:mt-24 lg:grid lg:grid-cols-2 lg:pl-48 lg:text-left" />
+      <CareInstructions className="mt-10 px-14 text-sm lg:m-auto lg:mt-24 lg:max-w-[707px] lg:px-0" />
       <Sustainable className="mt-8" product={product} style={{ backgroundColor: product.bgColor }} />
       <YouMayLike />
     </div>

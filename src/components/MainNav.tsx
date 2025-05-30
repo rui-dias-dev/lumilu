@@ -5,7 +5,7 @@ import Link from 'next/link';
 const MainNav: FC = () => {
   return (
     <div className="m-auto hidden w-full px-48 lg:block">
-      <div className="flex items-center justify-between overflow-auto p-6">
+      <div className="flex items-center justify-between overflow-auto py-6">
         <Link href={'/'}>
           <Logo height={36} width={92} />
         </Link>
