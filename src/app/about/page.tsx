@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
+import ContactAndAboutSection from '@/components/ContactAndAboutSection';
 
-interface AboutPageProps {}
-
-const AboutPage: FC<AboutPageProps> = ({}) => {
-  return <div>AboutPage</div>;
+const AboutPage = () => {
+  return <ContactAndAboutSection />;
 };
 
 export default AboutPage;

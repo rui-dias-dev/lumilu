@@ -14,7 +14,8 @@ const SubscribeSection: FC = ({}) => {
         />
         <Image
           alt="flowers"
-          fill
+          width={1440}
+          height={693}
           src={'/images/home/subscriptionBackgroundDesktop.png'}
           className="hidden h-full w-full object-cover md:inline-block"
         />

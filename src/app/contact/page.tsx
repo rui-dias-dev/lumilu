@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
+import ContactAndAboutSection from '@/components/ContactAndAboutSection';
 
-interface ContactPageProps {}
-
-const ContactPage: FC<ContactPageProps> = ({}) => {
-  return <div>ContactPage</div>;
+const ContactPage = () => {
+  return <ContactAndAboutSection />;
 };
 
 export default ContactPage;

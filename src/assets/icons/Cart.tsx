@@ -1,4 +1,3 @@
-// src/assets/icons/Cart.tsx
 import * as React from 'react';
 
 export default function Cart(props: React.SVGProps<SVGSVGElement>) {

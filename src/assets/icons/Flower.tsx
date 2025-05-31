@@ -1,4 +1,3 @@
-// src/components/icons/Flower.tsx
 import * as React from 'react';
 
 const Flower = (props: React.SVGProps<SVGSVGElement>) => (
