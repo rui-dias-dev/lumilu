@@ -5,7 +5,7 @@ import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-reac
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Product } from '@/data/products';
-import { Button } from './ui/button';
+import BuyButton from './BuyButton';
 
 interface ProductCarouselProps {
   product: Product;
@@ -82,9 +82,7 @@ const ProductCarousel: FC<ProductCarouselProps> = ({ product }) => {
           </div>
         </div>
       </div>
-      <Button className="product-buy-button mt-16 hidden items-center justify-self-start rounded-full bg-[#F6E6D9] px-14 py-6 text-black uppercase lg:flex">
-        Add to cart
-      </Button>
+      <BuyButton className="hidden! lg:flex!" product={product} />
     </div>
   );
 };

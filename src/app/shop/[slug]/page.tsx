@@ -2,25 +2,25 @@ import { products } from '@/data/products';
 import { formatPrice } from '@/lib/formatters';
 import { notFound } from 'next/navigation';
 import { Fish } from '@/assets/icons';
-import { Button } from '@/components/ui/button';
 import FeaturesAndCare from '@/components/FeaturesAndCare';
 import CareInstructions from '@/components/CareInstructions';
 import Sustainable from '@/components/Sustainable';
 import YouMayLike from '@/components/YouMayLike';
 import ProductCarousel from '@/components/ProductCarousel';
+import BuyButton from '@/components/BuyButton';
 
 export function generateStaticParams() {
   return products.map((product) => ({
-    id: product.id,
+    slug: product.slug,
   }));
 }
 interface Params {
-  id: string;
+  slug: string;
 }
 
 export default async function ProductPage({ params }: { params: Promise<Params> }) {
-  const { id } = await params;
-  const product = products.find((p) => p.id === id);
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
   if (!product) notFound();
 
   const price = formatPrice({
@@ -55,9 +55,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
           <p className="font-bold">{price}</p>
           <Fish width={80} height={71} />
         </div>
-        <Button className="product-buy-button rounded-full bg-[#F6E6D9] px-16 py-6 text-black uppercase lg:hidden lg:justify-self-start">
-          Add to cart
-        </Button>
+        <BuyButton className="product-buy-button lg:hidden!" product={product}></BuyButton>
       </section>
 
       <FeaturesAndCare className="mt-8 text-center text-black lg:mt-24 lg:grid lg:grid-cols-2 lg:pl-48 lg:text-left" />

@@ -1,3 +1,10 @@
+export interface ShopifyBuyConfig {
+  productId: string;
+  moneyFormat: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  options: Record<string, any>;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -9,6 +16,7 @@ export interface Product {
     background: string;
   };
   images: { src: string; alt: string }[];
+  shopifyBuyConfig: ShopifyBuyConfig;
   dimensions: {
     lengthCm: number;
     widthCm: number;
@@ -108,6 +116,100 @@ export const products: Product[] = [
       detail: `At Lumilu, sustainability isn’t just a buzzword—it’s at the heart of everything we do. From eco‑friendly materials to responsible production, we are committed to protecting both your practice and the planet. All mats are produced in smaller batches with materials kind to the Earth.`,
       note: 'Eco‑conscious packaging & includes a recycled polyester carrying strap. Please recycle the packaging responsibly.',
     },
+    shopifyBuyConfig: {
+      productId: '15077815648629',
+      moneyFormat: '%E2%82%AC{{amount_with_comma_separator}}',
+      options: {
+        product: {
+          styles: {
+            product: {
+              '@media (min-width: 601px)': {
+                'max-width': 'calc(25% - 20px)',
+                'margin-left': '20px',
+                'margin-bottom': '50px',
+              },
+            },
+            button: {
+              color: '#000000',
+              ':hover': {
+                color: '#000000',
+                'background-color': '#ddcfc3',
+              },
+              'background-color': '#f6e6d9',
+              ':focus': {
+                'background-color': '#ddcfc3',
+              },
+              'border-radius': '40px',
+            },
+          },
+          contents: { img: false, title: false, price: false },
+          text: { button: 'Add to cart' },
+        },
+        productSet: {
+          styles: {
+            products: {
+              '@media (min-width: 601px)': {
+                'margin-left': '-20px',
+              },
+            },
+          },
+        },
+        modalProduct: {
+          contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true },
+          styles: {
+            product: {
+              '@media (min-width: 601px)': {
+                'max-width': '100%',
+                'margin-left': '0px',
+                'margin-bottom': '0px',
+              },
+            },
+            button: {
+              color: '#000000',
+              ':hover': {
+                color: '#000000',
+                'background-color': '#ddcfc3',
+              },
+              'background-color': '#f6e6d9',
+              ':focus': {
+                'background-color': '#ddcfc3',
+              },
+              'border-radius': '40px',
+            },
+          },
+          text: { button: 'Add to cart' },
+        },
+        cart: {
+          styles: {
+            button: {
+              color: '#000000',
+              ':hover': {
+                color: '#000000',
+                'background-color': '#ddcfc3',
+              },
+              'background-color': '#f6e6d9',
+              ':focus': {
+                'background-color': '#ddcfc3',
+              },
+              'border-radius': '40px',
+            },
+          },
+          text: { total: 'Subtotal', button: 'Checkout' },
+          popup: false,
+        },
+        toggle: {
+          styles: {
+            toggle: {
+              'background-color': '#f6e6d9',
+              ':hover': { 'background-color': '#ddcfc3' },
+              ':focus': { 'background-color': '#ddcfc3' },
+            },
+            count: { color: '#000000', ':hover': { color: '#000000' } },
+            iconPath: { fill: '#000000' },
+          },
+        },
+      },
+    },
   },
 
   {
@@ -178,6 +280,36 @@ export const products: Product[] = [
       title: 'Sustainable',
       detail: `At Lumilu, sustainability isn’t just a buzzword—it’s at the heart of everything we do. From eco‑friendly materials to responsible production, we are committed to protecting both your practice and the planet. All mats are produced in smaller batches with materials kind to the Earth.`,
       note: 'Eco‑conscious packaging & includes a recycled polyester carrying strap. Please recycle the packaging responsibly.',
+    },
+    shopifyBuyConfig: {
+      productId: '15077865128309',
+      moneyFormat: '%E2%82%AC{{amount_with_comma_separator}}',
+      options: {
+        product: {
+          styles: {
+            button: {
+              color: '#000000',
+              'background-color': '#f6e6d9',
+              ':hover': { 'background-color': '#ddcfc3' },
+              'border-radius': '40px',
+            },
+          },
+          contents: { img: false, title: false, price: false },
+          text: { button: 'Add to cart' },
+        },
+        cart: {
+          styles: { button: { color: '#000000', 'background-color': '#f6e6d9' } },
+          text: { total: 'Subtotal', button: 'Checkout' },
+          popup: false,
+        },
+        toggle: {
+          styles: {
+            toggle: { 'background-color': '#f6e6d9' },
+            count: { color: '#000000' },
+            iconPath: { fill: '#000000' },
+          },
+        },
+      },
     },
   },
 
@@ -250,6 +382,73 @@ export const products: Product[] = [
       detail: `At Lumilu, sustainability isn’t just a buzzword—it’s at the heart of everything we do. From eco‑friendly materials to responsible production, we are committed to protecting both your practice and the planet. All mats are produced in smaller batches with materials kind to the Earth.`,
       note: 'Eco‑conscious packaging & includes a recycled polyester carrying strap. Please recycle the packaging responsibly.',
     },
+    shopifyBuyConfig: {
+      productId: '15077864341877',
+      moneyFormat: '%E2%82%AC{{amount_with_comma_separator}}',
+      options: {
+        product: {
+          styles: {
+            product: {
+              '@media (min-width: 601px)': {
+                'max-width': 'calc(25% - 20px)',
+                'margin-left': '20px',
+                'margin-bottom': '50px',
+              },
+            },
+            button: {
+              color: '#000000',
+              ':hover': { color: '#000000', 'background-color': '#ddcfc3' },
+              'background-color': '#f6e6d9',
+              ':focus': { 'background-color': '#ddcfc3' },
+              'border-radius': '40px',
+            },
+          },
+          contents: { img: false, title: false, price: false },
+          text: { button: 'Add to cart' },
+        },
+        productSet: { styles: { products: { '@media (min-width: 601px)': { 'margin-left': '-20px' } } } },
+        modalProduct: {
+          contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true },
+          styles: {
+            product: {
+              '@media (min-width: 601px)': { 'max-width': '100%', 'margin-left': '0px', 'margin-bottom': '0px' },
+            },
+            button: {
+              color: '#000000',
+              ':hover': { color: '#000000', 'background-color': '#ddcfc3' },
+              'background-color': '#f6e6d9',
+              ':focus': { 'background-color': '#ddcfc3' },
+              'border-radius': '40px',
+            },
+          },
+          text: { button: 'Add to cart' },
+        },
+        cart: {
+          styles: {
+            button: {
+              color: '#000000',
+              ':hover': { color: '#000000', 'background-color': '#ddcfc3' },
+              'background-color': '#f6e6d9',
+              ':focus': { 'background-color': '#ddcfc3' },
+              'border-radius': '40px',
+            },
+          },
+          text: { total: 'Subtotal', button: 'Checkout' },
+          popup: false,
+        },
+        toggle: {
+          styles: {
+            toggle: {
+              'background-color': '#f6e6d9',
+              ':hover': { 'background-color': '#ddcfc3' },
+              ':focus': { 'background-color': '#ddcfc3' },
+            },
+            count: { color: '#000000', ':hover': { color: '#000000' } },
+            iconPath: { fill: '#000000' },
+          },
+        },
+      },
+    },
   },
   {
     id: 'praia-algarve',
@@ -319,6 +518,73 @@ export const products: Product[] = [
       title: 'Sustainable',
       detail: `At Lumilu, sustainability isn’t just a buzzword—it’s at the heart of everything we do. From eco‑friendly materials to responsible production, we are committed to protecting both your practice and the planet. All mats are produced in smaller batches with materials kind to the Earth.`,
       note: 'Eco‑conscious packaging & includes a recycled polyester carrying strap. Please recycle the packaging responsibly.',
+    },
+    shopifyBuyConfig: {
+      productId: '15077864931701',
+      moneyFormat: '%E2%82%AC{{amount_with_comma_separator}}',
+      options: {
+        product: {
+          styles: {
+            product: {
+              '@media (min-width: 601px)': {
+                'max-width': 'calc(25% - 20px)',
+                'margin-left': '20px',
+                'margin-bottom': '50px',
+              },
+            },
+            button: {
+              color: '#000000',
+              ':hover': { color: '#000000', 'background-color': '#ddcfc3' },
+              'background-color': '#f6e6d9',
+              ':focus': { 'background-color': '#ddcfc3' },
+              'border-radius': '40px',
+            },
+          },
+          contents: { img: false, title: false, price: false },
+          text: { button: 'Add to cart' },
+        },
+        productSet: { styles: { products: { '@media (min-width: 601px)': { 'margin-left': '-20px' } } } },
+        modalProduct: {
+          contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true },
+          styles: {
+            product: {
+              '@media (min-width: 601px)': { 'max-width': '100%', 'margin-left': '0px', 'margin-bottom': '0px' },
+            },
+            button: {
+              color: '#000000',
+              ':hover': { color: '#000000', 'background-color': '#ddcfc3' },
+              'background-color': '#f6e6d9',
+              ':focus': { 'background-color': '#ddcfc3' },
+              'border-radius': '40px',
+            },
+          },
+          text: { button: 'Add to cart' },
+        },
+        cart: {
+          styles: {
+            button: {
+              color: '#000000',
+              ':hover': { color: '#000000', 'background-color': '#ddcfc3' },
+              'background-color': '#f6e6d9',
+              ':focus': { 'background-color': '#ddcfc3' },
+              'border-radius': '40px',
+            },
+          },
+          text: { total: 'Subtotal', button: 'Checkout' },
+          popup: false,
+        },
+        toggle: {
+          styles: {
+            toggle: {
+              'background-color': '#f6e6d9',
+              ':hover': { 'background-color': '#ddcfc3' },
+              ':focus': { 'background-color': '#ddcfc3' },
+            },
+            count: { color: '#000000', ':hover': { color: '#000000' } },
+            iconPath: { fill: '#000000' },
+          },
+        },
+      },
     },
   },
 ];
