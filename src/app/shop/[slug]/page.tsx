@@ -8,6 +8,7 @@ import Sustainable from '@/components/Sustainable';
 import YouMayLike from '@/components/YouMayLike';
 import ProductCarousel from '@/components/ProductCarousel';
 import BuyButton from '@/components/BuyButton';
+import MobileBuyButton from '@/components/MobileBuyButton';
 
 export function generateStaticParams() {
   return products.map((product) => ({
@@ -55,7 +56,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
           <p className="font-bold">{price}</p>
           <Fish width={80} height={71} />
         </div>
-        <BuyButton className="product-buy-button lg:hidden!" product={product}></BuyButton>
+        <MobileBuyButton product={product} />
       </section>
 
       <FeaturesAndCare className="mt-8 text-center text-black lg:mt-24 lg:grid lg:grid-cols-2 lg:pl-48 lg:text-left" />
