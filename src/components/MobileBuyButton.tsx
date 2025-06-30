@@ -1,7 +1,7 @@
 'use client';
 
 import React, { FC } from 'react';
-import { useWindowSize } from '../../hooks/useWindowSize';
+import { useWindowSize } from '@/hooks/useWindowSize';
 import { Product } from '@/data/products';
 import BuyButton from './BuyButton';
 

@@ -11,10 +11,11 @@ const ProductsList: FC = () => {
           <Link key={product.id} href={`/shop/${product.id}`} className="">
             <div className="relative w-full overflow-hidden">
               <Image
-                src={`/images/shop/${product.name.toLowerCase()}-mobile.jpg`}
+                src={product.shopImage.mobile.src}
                 alt={product.name}
                 width={1010}
                 height={2000}
+                quality={100}
                 className="w-full object-contain"
               />
             </div>
@@ -26,10 +27,11 @@ const ProductsList: FC = () => {
           <Link key={product.id} href={`/shop/${product.id}`} className="" style={{ backgroundColor: product.bgColor }}>
             <div className="relative w-full overflow-hidden">
               <Image
-                src={`/images/shop/${product.name.toLowerCase()}.png`}
+                src={product.shopImage.desktop.src}
                 alt={product.name}
-                width={1440}
-                height={1200}
+                width={1356}
+                height={1129}
+                quality={100}
                 className="w-full object-contain"
               />
             </div>

@@ -54,7 +54,7 @@ const ProductCarousel: FC<ProductCarouselProps> = ({ product }) => {
     <div className="product-gallery grid">
       <div className="space-y-2.5 lg:grid lg:grid-flow-col lg:space-y-0">
         <div ref={mainRef} className="main-gallery overflow-hidden">
-          <div className="flex">
+          <div className="flex cursor-grab">
             {product.images.map(({ src, alt }, index) => (
               <div key={src} className="min-w-full">
                 <div className="relative h-[412px] lg:h-[436px] lg:w-[436px]">
@@ -72,7 +72,7 @@ const ProductCarousel: FC<ProductCarouselProps> = ({ product }) => {
                 key={src}
                 onClick={() => handleThumbClick(index)}
                 className={cn(
-                  'relative h-24 w-24 shrink-0 overflow-hidden transition-opacity lg:h-[107px] lg:w-[107px]',
+                  'relative h-24 w-24 shrink-0 cursor-grab overflow-hidden transition-opacity lg:h-[107px] lg:w-[107px]',
                   index === selectedIndex ? 'opacity-100' : 'opacity-60',
                 )}
               >

@@ -16,6 +16,16 @@ export interface Product {
     background: string;
   };
   images: { src: string; alt: string }[];
+  shopImage: {
+    desktop: {
+      src: string;
+      alt: string;
+    };
+    mobile: {
+      src: string;
+      alt: string;
+    };
+  };
   shopifyBuyConfig: ShopifyBuyConfig;
   dimensions: {
     lengthCm: number;
@@ -53,22 +63,32 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'lua-algarve',
     description: [
-      'This minimalist and organic yoga mat is inspired by Portugal’s natural beauty, features elements of water and the moon’s cycle, symbolizing balance, renewal, and transformation. Designed for those seeking a deeper connection to nature and mindfulness, it blends art, spirituality, and function to enhance any yoga or meditation practice.',
-      'With its soothing, grounding energy, this mat is particularly well-suited for both Pitta and Vata personalities. The moon’s calming influence helps balance Pitta’s intensity while offering stability and relaxation to Vata’s restless nature, making it ideal for those looking to cultivate tranquility, intuition, and harmony in their practice.',
+      'This one minimalist and organic yoga mat one is inspired by one Portugal’s natural beauty, features elements of one water and the moon’s cycle, symbolizing one balance, renewal, and transformation. Designed for those seeking a one deeper connection to nature and mindfulness, it blends one art, spirituality, and function one to enhance any yoga or meditation practice.',
+      'With its soothing, grounding energy, this mat is particularly well-suited for both one Pitta one and one Vata one personalities. The moon’s calming influence helps one balance Pitta’s intensity one while offering one stability and relaxation one to one Vata’s restless nature, making it ideal for those looking to cultivate one tranquility, intuition, and harmony one in their practice.',
     ],
     bgColor: '#5C6A9A',
     classnames: {
       background: 'lua',
     },
     images: [
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/LUA-product-page-7_bu9jjy.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/LUA-product-page-8_updl8c.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/LUA-product-page_yqupat.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/LUA-product-page-3_onraqs.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/LUA-product-page-4_gq4ew9.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/LUA-product-page-5_umocgs.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/LUA-product-page-1_emha5p.jpg', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310989/LUA-product-page-7_xdv7il.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310976/LUA-product-page-8_nih3fn.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310983/LUA-product-page_h7fegt.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310980/LUA-product-page-2_dwguon.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310970/LUA-product-page-5_sqllad.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310973/LUA-product-page-4_emtr4v.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310986/LUA-product-page-1_c2ynlb.webp', alt: '' },
     ],
+    shopImage: {
+      desktop: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311177/SHOP-page-01_uflf95.webp',
+        alt: '',
+      },
+      mobile: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311157/SHOP-page_for-web-lua_uofnu2.webp',
+        alt: '',
+      },
+    },
     dimensions: { lengthCm: 178, widthCm: 61, thicknessMm: 3, weightKg: 2.3 },
     price: { amount: 85.0, currency: 'EUR' },
     features: [
@@ -109,7 +129,7 @@ export const products: Product[] = [
     ],
     sustainable: {
       image: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852578/LUA-product-page-9_quafv1.jpg',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310966/LUA-product-page-9_jzmik5.webp',
         alt: '',
       },
       title: 'Sustainable',
@@ -218,22 +238,35 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'flor-algarve',
     description: [
-      'Inspired by the traditions of beekeeping and the harmony between honeybees and flowers, this minimalist and organic yoga mat symbolizes connection, renewal, and the natural flow of energy. The design balances grounded stability with gentle transformation, making it perfect for those seeking mindfulness, creativity, and a deeper connection to nature in their practice.',
-      'With its warm, nurturing aesthetic, this mat encourages a sense of harmony and flow in every movement. It is especially beneficial for Vata personalities, offering grounding and balance, while also supporting Pitta by promoting calm and emotional balance.',
+      'Inspired by the traditions of beekeeping and the harmony between honeybees and flowers, this minimalist and organic yoga mat symbolizes one connection, renewal, and the one natural flow of energy. The design balances one grounded stability one with one gentle transformation, making it perfect for those seeking one mindfulness, creativity, and a one deeper connection to nature in their practice.',
+      'With its one warm, nurturing aesthetic, this mat encourages a sense of one harmony and flow one in every movement. It is especially beneficial for one Vata one personalities, offering grounding and balance, while also supporting one Pitta one by promoting calm and emotional balance.',
     ],
     bgColor: '#B9B9DA',
     classnames: {
       background: 'flor',
     },
     images: [
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852601/FLOR-product-page-9_e5znmy.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852608/FLOR-product-page-10_yfodti.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852595/FLOR-product-page-6_v94ojf.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852594/FLOR-product-page-2_x64vqb.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852596/FLOR-product-page-7_uh7ix7.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852592/FLOR-product-page-3_rieu1p.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852591/FLOR-product-page-1_cjdxmb.jpg', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310946/FLOR-product-page-9_bw9n1h.webp', alt: '' },
+      {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310950/FLOR-product-page-10_edrdme.webp',
+        alt: '',
+      },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310944/FLOR-product-page-6_wjvami.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310963/FLOR-product-page-2_nsw302.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310940/FLOR-product-page-7_y2qq2j.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310960/FLOR-product-page-3_nzu1jf.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310940/FLOR-product-page_wdbisj.webp', alt: '' },
     ],
+    shopImage: {
+      desktop: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311170/SHOP-web-08_y1kifa.webp',
+        alt: '',
+      },
+      mobile: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311154/SHOP-page_for-web-flor_e4ck4g.webp',
+        alt: '',
+      },
+    },
     dimensions: { lengthCm: 178, widthCm: 61, thicknessMm: 3, weightKg: 2.3 },
     price: { amount: 85.0, currency: 'EUR' },
     features: [
@@ -274,7 +307,7 @@ export const products: Product[] = [
     ],
     sustainable: {
       image: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852604/FLOR-product-page-11_iork8q.jpg',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310953/FLOR-product-page-11_zj7wx7.webp',
         alt: '',
       },
       title: 'Sustainable',
@@ -319,22 +352,32 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'sol-algarve',
     description: [
-      'Inspired by the warmth of the sunset, this yoga mat captures the essence of the earth’s natural energy, symbolizing vitality, renewal, and grounded connection. The design evokes the calming glow of the setting sun and the nourishing presence of seaweed, creating a perfect balance of energy and stability. Ideal for those seeking a harmonious and rejuvenating practice.',
-      'It is especially beneficial for Kapha  personalities, as its energizing qualities stimulate motivation and transformation, counteracting Kapha’s tendency toward stagnation. It also supports Vata types by offering nourishing and grounding energy to promote stability and calm.',
+      'Inspired by the warmth of the one sunset, this yoga mat captures the essence of the earth’s natural energy, symbolizing one vitality, one renewal, and one grounded connection. The design evokes the one calming glow of the setting sun one and the one nourishing presence of seaweed, creating a perfect balance of one energy one and one stability. Ideal for those seeking a one harmonious and rejuvenating practice.',
+      'It is especially beneficial for one Kapha one  personalities, as its one energizing one qualities stimulate one motivation one and one transformation, counteracting Kapha’s tendency toward stagnation. It also supports one Vata one types by offering one nourishing and grounding one energy to promote one stability one and one calm.',
     ],
     bgColor: '#DCA2AC',
     classnames: {
       background: 'sol',
     },
     images: [
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852544/SOL-product-page-9_hkgmu4.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852543/SOL-product-page-10_vhwpqa.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852544/SOL-product-page-8_qlpmsg.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852548/SOL-product-page-7_wtyibu.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852555/SOL-product-page-3_idxjfn.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852550/SOL-product-page-4_flgxfh.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852548/SOL-product-page_kwsdjl.jpg', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311038/SOL-product-page-9_mfkamd.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311032/SOL-product-page-10_j9th88.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311029/SOL-product-page-8_kgrmta.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311045/SOL-product-page-7_hc2zdx.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311025/SOL-product-page-3_mid6dd.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311042/SOL-product-page-6_qrudbn.webp', alt: '' },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311048/SOL-product-page_bxvd8c.webp', alt: '' },
     ],
+    shopImage: {
+      desktop: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311174/SHOP-web-05_ryizxv.webp',
+        alt: '',
+      },
+      mobile: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311167/SHOP-page_for-web-sol_vqekjw.webp',
+        alt: '',
+      },
+    },
     dimensions: { lengthCm: 178, widthCm: 61, thicknessMm: 3, weightKg: 2.3 },
     price: { amount: 85.0, currency: 'EUR' },
     features: [
@@ -375,7 +418,7 @@ export const products: Product[] = [
     ],
     sustainable: {
       image: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852544/SOL-product-page-11_jsaa4r.jpg',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311035/SOL-product-page-11_pljuj4.webp',
         alt: '',
       },
       title: 'Sustainable',
@@ -457,25 +500,50 @@ export const products: Product[] = [
     collection: 'Algarve Collection',
     slug: 'praia-algarve',
     description: [
-      'Inspired by the playful charm of coastal beach towns, this yoga mat captures a sense of lightness, joy, and renewal. The flowing lines and ice cream-colored palette evoke the carefree spirit of summer by the sea, symbolizing ease, movement, and a deep connection to simple pleasures. Designed for those who seek a refreshing and uplifting practice, it encourages a sense of fluidity and relaxation, making every movement feel effortless and free.',
-      'This mat is especially suited for Pitta personalities, as its cooling and soothing qualities help to soften intensity and bring balance. It also benefits Kapha types by adding a touch of playfulness and lightness, encouraging movement and renewal.',
+      'Inspired by the one playful charm of coastal beach towns, this yoga mat captures a sense of one lightness, joy, and renewal. The flowing lines and one ice cream-colored palette one evoke the one carefree spirit of summer by the sea, symbolizing one ease, movement, and a deep connection to simple pleasures. Designed for those who seek a one refreshing and uplifting practice, it encourages a sense of one fluidity and relaxation, making every movement feel effortless and free.',
+      'This mat is especially suited for one Pitta one personalities, as its one cooling and soothing one qualities help to one soften intensity and bring balance. It also benefits one Kapha one types by adding a touch of one playfulness and lightness, encouraging movement and renewal.',
     ],
     bgColor: '#B4E1C2',
     classnames: {
       background: 'praia',
     },
     images: [
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852563/PRAIA-product-page-9_jsg7ny.jpg', alt: '' },
       {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852562/PRAIA-product-page-10_ly2i72.jpg',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311018/PRAIA-product-page-9_hvtozu.webp',
         alt: '',
       },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852569/PRAIA-product-page-6_ofvup1.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852578/PRAIA-product-page-2_oirxot.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852571/PRAIA-product-page-5_ge4abj.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852571/PRAIA-product-page-4_pvdwhk.jpg', alt: '' },
-      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852579/PRAIA-product-page-3_qmjnsb.jpg', alt: '' },
+      {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311006/PRAIA-product-page-10_olhs2f.webp',
+        alt: '',
+      },
+      {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311012/PRAIA-product-page-8_tm2iq8.webp',
+        alt: '',
+      },
+      {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310996/PRAIA-product-page-2_jyd7m2.webp',
+        alt: '',
+      },
+      { src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310999/PRAIA-product-page_nnx0da.webp', alt: '' },
+      {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311015/PRAIA-product-page-4_dtflia.webp',
+        alt: '',
+      },
+      {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311009/PRAIA-product-page-3_n2hyox.webp',
+        alt: '',
+      },
     ],
+    shopImage: {
+      desktop: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311163/SHOP-web-07_ccgcha.webp',
+        alt: '',
+      },
+      mobile: {
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311160/SHOP-page_for-web-praia_lwyvva.webp',
+        alt: '',
+      },
+    },
     dimensions: { lengthCm: 178, widthCm: 61, thicknessMm: 3, weightKg: 2.3 },
     price: { amount: 85.0, currency: 'EUR' },
     features: [
@@ -516,7 +584,7 @@ export const products: Product[] = [
     ],
     sustainable: {
       image: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852562/PRAIA-product-page-11_ze5x6o.jpg',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311002/PRAIA-product-page-11_pwpxn6.webp',
         alt: '',
       },
       title: 'Sustainable',

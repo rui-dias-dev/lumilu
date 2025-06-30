@@ -12,26 +12,51 @@ import { useParams } from 'next/navigation';
 const images = [
   {
     id: 'lua-algarve',
-    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852584/LUA-product-page-1_emha5p.jpg',
-    alt: 'Related item 1',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311320/3_uswxt4.webp',
+    alt: '',
     href: '/shop/lua-algarve',
   },
   {
     id: 'flor-algarve',
-    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852595/FLOR-product-page-6_v94ojf.jpg',
-    alt: 'Related item 2',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311310/5_yb1db8.webp',
+    alt: '',
     href: '/shop/flor-algarve',
   },
   {
     id: 'praia-algarve',
-    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852569/PRAIA-product-page-6_ofvup1.jpg',
-    alt: 'Related item 3',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311323/2_jzqo91.webp',
+    alt: '',
     href: '/shop/praia-algarve',
   },
   {
     id: 'sol-algarve',
-    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852549/SOL-product-page-6_nbdsbo.jpg',
-    alt: 'Related item 3',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311330/7_pcsnk6.webp',
+    alt: '',
+    href: '/shop/sol-algarve',
+  },
+
+  {
+    id: 'lua-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311316/4_f5bywc.webp',
+    alt: '',
+    href: '/shop/lua-algarve',
+  },
+  {
+    id: 'flor-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311333/6_fmfgam.webp',
+    alt: '',
+    href: '/shop/flor-algarve',
+  },
+  {
+    id: 'praia-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311327/1_x2wchg.webp',
+    alt: '',
+    href: '/shop/praia-algarve',
+  },
+  {
+    id: 'sol-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311313/8_ymxakk.webp',
+    alt: '',
     href: '/shop/sol-algarve',
   },
 ];
@@ -54,7 +79,7 @@ const YouMayLike: FC<YouMayLikeProps> = ({ className, ...props }) => {
       <Carousel opts={{ align: 'start', dragFree: true }}>
         <CarouselContent className="gap-2.5">
           {filteredImages.map(({ src, alt, href }, idx) => (
-            <CarouselItem key={idx} className="flex basis-[66%] items-center sm:basis-1/3">
+            <CarouselItem key={idx} className="flex basis-[66%] items-center sm:basis-1/4">
               <Link href={href} className="m-auto block overflow-hidden">
                 <Image src={src} alt={alt} width={296} height={296} className="object-cover" quality={90} />
               </Link>
