@@ -19,7 +19,7 @@ const ContactAndAboutSection = () => {
         </p>
         <p className="mt-3 px-14 lg:mr-[277px] lg:ml-auto lg:max-w-[345px] lg:px-0">
           In my early 30s, I realized my true calling was to blend design, yoga, and mindful living by creating
-          beautifully crafted yoga mats. Now, I get to share my love for design, marketing, and yoga with a like -
+          beautifully crafted yoga mats. Now, I get to share my love for design, marketing, and yoga with a like -
           minded community, <span className="font-semibold">bringing art and intention into every practice.</span>
         </p>
       </div>
