@@ -31,7 +31,7 @@ const SubscribeForm: FC = ({}) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex space-y-4 border-0">
-        <FormField
+        {/* <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
@@ -45,7 +45,7 @@ const SubscribeForm: FC = ({}) => {
         />
         <Button type="submit" className="bg-yellow rounded-none text-black">
           Subscribe
-        </Button>
+        </Button> */}
       </form>
     </Form>
   );

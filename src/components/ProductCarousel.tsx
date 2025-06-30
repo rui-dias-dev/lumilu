@@ -53,11 +53,14 @@ const ProductCarousel: FC<ProductCarouselProps> = ({ product }) => {
   return (
     <div className="product-gallery grid">
       <div className="space-y-2.5 lg:grid lg:grid-flow-col lg:space-y-0">
-        <div ref={mainRef} className="main-gallery overflow-hidden">
+        <div
+          ref={mainRef}
+          className="main-gallery m-auto h-[412px] w-[412px] overflow-hidden lg:h-[436px] lg:w-[436px]"
+        >
           <div className="flex cursor-grab">
             {product.images.map(({ src, alt }, index) => (
               <div key={src} className="min-w-full">
-                <div className="relative h-[412px] lg:h-[436px] lg:w-[436px]">
+                <div className="relative h-[412px] w-[412px] lg:h-[436px] lg:w-[436px]">
                   <Image src={src} alt={alt} fill className="object-cover" priority={index === 0} />
                 </div>
               </div>
@@ -65,7 +68,7 @@ const ProductCarousel: FC<ProductCarouselProps> = ({ product }) => {
           </div>
         </div>
 
-        <div ref={thumbRef} className="overflow-hidden lg:h-[436px]">
+        <div ref={thumbRef} className="m-auto w-[412px] overflow-hidden lg:h-[436px]">
           <div className="flex space-x-1 lg:h-full lg:flex-col lg:space-y-[3px] lg:space-x-0">
             {product.images.map(({ src, alt }, index) => (
               <button

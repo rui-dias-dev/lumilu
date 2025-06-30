@@ -81,11 +81,11 @@ export const products: Product[] = [
     ],
     shopImage: {
       desktop: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311177/SHOP-page-01_uflf95.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750849814/SHOP-page-01_fyjzf5.png',
         alt: '',
       },
       mobile: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311157/SHOP-page_for-web-lua_uofnu2.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750849473/SHOP_page-01_unrcvf.jpg',
         alt: '',
       },
     },
@@ -259,11 +259,11 @@ export const products: Product[] = [
     ],
     shopImage: {
       desktop: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311170/SHOP-web-08_y1kifa.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750849874/SHOP-web-08_cazaik.png',
         alt: '',
       },
       mobile: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311154/SHOP-page_for-web-flor_e4ck4g.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750849468/SHOP_page-02_ohvx0e.jpg',
         alt: '',
       },
     },
@@ -370,11 +370,11 @@ export const products: Product[] = [
     ],
     shopImage: {
       desktop: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311174/SHOP-web-05_ryizxv.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750849875/SHOP-web-05_c9p12r.png',
         alt: '',
       },
       mobile: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311167/SHOP-page_for-web-sol_vqekjw.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750854550/SHOP-page_for-web-sol_ceqxht.jpg',
         alt: '',
       },
     },
@@ -536,11 +536,11 @@ export const products: Product[] = [
     ],
     shopImage: {
       desktop: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311163/SHOP-web-07_ccgcha.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750849875/SHOP-web-07_pxulyc.png',
         alt: '',
       },
       mobile: {
-        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311160/SHOP-page_for-web-praia_lwyvva.webp',
+        src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750849470/SHOP_page-03_f27nnv.jpg',
         alt: '',
       },
     },

@@ -29,8 +29,8 @@ const ProductsList: FC = () => {
               <Image
                 src={product.shopImage.desktop.src}
                 alt={product.name}
-                width={1356}
-                height={1129}
+                width={1440}
+                height={1220}
                 quality={100}
                 className="w-full object-contain"
               />

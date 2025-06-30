@@ -229,6 +229,14 @@ body .sol {
   grid-area: image;
 }
 
+
+.wave-desktop {
+  background-image: url("https://res.cloudinary.com/dka4rwtwy/image/upload/v1751319817/wave_qsmkyq.webp");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: contain;
+}
+
 @media screen and (min-width: 1024px) {
 
   /* Product */

@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
-import { Fish, Wave } from '@/assets/icons';
-import WaveDesktop from '@/assets/icons/WaveDesktop';
+import { Fish } from '@/assets/icons';
 import { useParams } from 'next/navigation';
+import Wave from './Wave';
 
 const images = [
   {
@@ -70,8 +70,7 @@ const YouMayLike: FC<YouMayLikeProps> = ({ className, ...props }) => {
 
   return (
     <section className={cn('bg-green relative w-full pt-12 pb-28 lg:pb-0', className)} {...props}>
-      <Wave className="absolute top-0 -translate-y-1/2 md:hidden" />
-      <WaveDesktop className="absolute top-0 hidden -translate-y-1/2 md:inline-block" />
+      <Wave />
       <div className="mb-6 w-full lg:flex lg:items-center lg:justify-between lg:px-48">
         <h2 className="text-center text-lg text-white uppercase lg:mt-20 lg:text-left">You May Also Like</h2>
         <Fish width={110} height={110} className="hidden lg:inline-block" />

@@ -1,16 +1,16 @@
-import { FishAndLines, Wave, WaveDesktop } from '@/assets/icons';
+import { FishAndLines } from '@/assets/icons';
 import React from 'react';
 import SubscribeSection from './SubscribeSection';
 import Image from 'next/image';
 import Link from 'next/link';
+import Wave from './Wave';
 
 const ContactAndAboutSection = () => {
   return (
     <section className="grid">
       <FishAndLines className="h-auto w-full lg:max-h-[500px]" />
       <div className="bg-green relative pt-[86px] pb-16 text-center text-sm text-white lg:pt-[170px] lg:pb-[97px] lg:text-left">
-        <Wave className="absolute top-0 -translate-y-1/2 md:hidden" />
-        <WaveDesktop className="absolute top-0 hidden -translate-y-1/2 md:inline-block" />
+        <Wave />
         <p className="px-14 lg:mr-[277px] lg:ml-auto lg:max-w-[345px] lg:px-0">
           As a graphic designer and passionate yoga lover,
           <span className="font-semibold">creativity and movement have always been a big part of my life.</span> Wanting

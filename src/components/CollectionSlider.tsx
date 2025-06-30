@@ -9,8 +9,7 @@ import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 import type { CarouselApi } from './ui/carousel';
 import AlgarveCollection from '@/assets/icons/AlgarveCollection';
 import { home } from '@/data/home';
-import { Wave } from '@/assets/icons';
-import WaveDesktop from '@/assets/icons/WaveDesktop';
+import Wave from './Wave';
 
 const SLIDE_COUNT = home.carousel.length;
 
@@ -48,8 +47,7 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
 
   return (
     <section className={cn('bg-green relative w-full pt-12 pb-20', className)} {...props}>
-      <Wave className="absolute top-0 -translate-y-1/2 md:hidden" />
-      <WaveDesktop className="absolute top-0 hidden -translate-y-1/2 md:inline-block" />
+      <Wave />
       <Carousel opts={{ align: 'start', dragFree: true }} setApi={setEmblaApi}>
         <CarouselContent>
           {home.carousel.map(({ link: { href }, image: { src, alt } }, index) => (
