@@ -9,19 +9,33 @@ const ContactAndAboutSection = () => {
   return (
     <section className="grid">
       <FishAndLines className="h-auto w-full lg:max-h-[500px]" />
-      <div className="bg-green relative pt-[86px] pb-16 text-center text-sm text-white lg:pt-[170px] lg:pb-[97px] lg:text-left">
+      <div className="bg-green relative w-full pt-[86px] pb-16 text-center text-sm text-white lg:pt-[170px] lg:pb-[97px] lg:text-left">
         <Wave />
-        <p className="px-14 lg:mr-[277px] lg:ml-auto lg:max-w-[345px] lg:px-0">
-          As a graphic designer and passionate yoga lover,
-          <span className="font-semibold">creativity and movement have always been a big part of my life.</span> Wanting
-          to deepen my personal practice, I completed my 200-hour Yoga Teacher Training - and in the process, I
-          discovered my dharma.
-        </p>
-        <p className="mt-3 px-14 lg:mr-[277px] lg:ml-auto lg:max-w-[345px] lg:px-0">
-          In my early 30s, I realized my true calling was to blend design, yoga, and mindful living by creating
-          beautifully crafted yoga mats. Now, I get to share my love for design, marketing, and yoga with a like -
-          minded community, <span className="font-semibold">bringing art and intention into every practice.</span>
-        </p>
+        <div className="px-[58px] lg:grid lg:grid-cols-12 lg:gap-[15px] lg:px-[190px]">
+          <div className="relative col-span-6">
+            <Image
+              fill
+              src={'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751310066/About_for-web-desktop_fywhg2.webp'}
+              alt=""
+              className="hidden object-contain lg:inline-block"
+            />
+          </div>
+          <div className="col-start-8 col-end-12">
+            <p className="px-14 lg:max-w-[345px] lg:px-0">
+              As a graphic designer and passionate yoga lover,
+              <span className="font-semibold">
+                creativity and movement have always been a big part of my life.
+              </span>{' '}
+              Wanting to deepen my personal practice, I completed my 200-hour Yoga Teacher Training - and in the
+              process, I discovered my dharma.
+            </p>
+            <p className="mt-3 px-14 lg:max-w-[345px] lg:px-0">
+              In my early 30s, I realized my true calling was to blend design, yoga, and mindful living by creating
+              beautifully crafted yoga mats. Now, I get to share my love for design, marketing, and yoga with a like -
+              minded community, <span className="font-semibold">bringing art and intention into every practice.</span>
+            </p>
+          </div>
+        </div>
       </div>
       <div className="relative lg:hidden">
         <Image alt="" src={'/images/contact/multiphoto.jpg'} width={1024} height={1278} className="h-full w-full" />
