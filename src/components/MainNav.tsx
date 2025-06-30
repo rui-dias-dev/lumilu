@@ -13,8 +13,8 @@ const MainNav: FC = () => {
           <Link className="m-0 uppercase" href={'/shop'}>
             Shop
           </Link>
-          <Link className="m-0 uppercase" href={'/about'}>
-            About
+          <Link className="m-0 uppercase" href={'/faq'}>
+            FAQ
           </Link>
           <Link className="uppercase" href={'/contact'}>
             Contact

@@ -51,7 +51,7 @@ const ProductCarousel: FC<ProductCarouselProps> = ({ product }) => {
   };
 
   return (
-    <div className="product-gallery">
+    <div className="product-gallery grid">
       <div className="space-y-2.5 lg:grid lg:grid-flow-col lg:space-y-0">
         <div ref={mainRef} className="main-gallery overflow-hidden">
           <div className="flex">
@@ -82,7 +82,7 @@ const ProductCarousel: FC<ProductCarouselProps> = ({ product }) => {
           </div>
         </div>
       </div>
-      <BuyButton className="hidden! lg:flex!" product={product} />
+      <BuyButton className="mt-auto hidden! lg:flex!" product={product} />
     </div>
   );
 };

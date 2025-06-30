@@ -7,16 +7,42 @@ import { cn } from '@/lib/utils';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 import { Fish, Wave } from '@/assets/icons';
 import WaveDesktop from '@/assets/icons/WaveDesktop';
+import { useParams } from 'next/navigation';
 
 const images = [
-  { src: '/images/product/you-may-also-like-flor.jpg', alt: 'Related item 1', href: '/shop/flor-algarve' },
-  { src: '/images/product/you-may-also-like-flor.jpg', alt: 'Related item 2', href: '/shop/flor-algarve' },
-  { src: '/images/product/you-may-also-like-flor.jpg', alt: 'Related item 3', href: '/shop/flor-algarve' },
+  {
+    id: 'lua-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852584/LUA-product-page-1_emha5p.jpg',
+    alt: 'Related item 1',
+    href: '/shop/lua-algarve',
+  },
+  {
+    id: 'flor-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852595/FLOR-product-page-6_v94ojf.jpg',
+    alt: 'Related item 2',
+    href: '/shop/flor-algarve',
+  },
+  {
+    id: 'praia-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852569/PRAIA-product-page-6_ofvup1.jpg',
+    alt: 'Related item 3',
+    href: '/shop/praia-algarve',
+  },
+  {
+    id: 'sol-algarve',
+    src: 'https://res.cloudinary.com/dka4rwtwy/image/upload/v1750852549/SOL-product-page-6_nbdsbo.jpg',
+    alt: 'Related item 3',
+    href: '/shop/sol-algarve',
+  },
 ];
 
 type YouMayLikeProps = ComponentProps<'section'>;
 
 const YouMayLike: FC<YouMayLikeProps> = ({ className, ...props }) => {
+  const { slug } = useParams();
+
+  const filteredImages = React.useMemo(() => images.filter((image) => image.id !== slug), [slug]);
+
   return (
     <section className={cn('bg-green relative w-full pt-12 pb-28 lg:pb-0', className)} {...props}>
       <Wave className="absolute top-0 -translate-y-1/2 md:hidden" />
@@ -27,7 +53,7 @@ const YouMayLike: FC<YouMayLikeProps> = ({ className, ...props }) => {
       </div>
       <Carousel opts={{ align: 'start', dragFree: true }}>
         <CarouselContent className="gap-2.5">
-          {images.map(({ src, alt, href }, idx) => (
+          {filteredImages.map(({ src, alt, href }, idx) => (
             <CarouselItem key={idx} className="flex basis-[66%] items-center sm:basis-1/3">
               <Link href={href} className="m-auto block overflow-hidden">
                 <Image src={src} alt={alt} width={296} height={296} className="object-cover" quality={90} />

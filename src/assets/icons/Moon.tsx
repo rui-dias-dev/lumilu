@@ -2,15 +2,7 @@ import * as React from 'react';
 
 export default function Moon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      id="MoonSVG"
-      xmlns="http://www.w3.org/2000/svg"
-      width="500"
-      height="500"
-      version="1.1"
-      viewBox="0 0 500 500"
-      {...props}
-    >
+    <svg id="MoonSVG" xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104" {...props}>
       <defs>
         <style>{`
           #MoonSVG .st0 { fill: #bfc57e; }
@@ -18,7 +10,7 @@ export default function Moon(props: React.SVGProps<SVGSVGElement>) {
       </defs>
       <path
         className="st0"
-        d="M188.48,80.71c-67.15,24.88-105.73,89.55-105.73,165.36,0,97.34,78.91,176.25,176.25,176.25,75.8,0,140.47-38.59,165.36-105.73-20.07,8.07-41.98,12.2-64.94,12.2-96.21,0-183.13-86.92-183.13-183.13,0-22.96,4.13-44.87,12.2-64.94Z"
+        d="M32.1899 0C11.747 7.57616 0 27.2644 0 50.3426C0 79.9769 24.0231 104 53.6574 104C76.7356 104 96.4238 92.253 104 71.8102C97.8888 74.2675 91.2192 75.5238 84.229 75.5238C54.9398 75.5238 28.4762 49.0602 28.4762 19.771C28.4762 12.7808 29.7325 6.11124 32.1899 0Z"
       />
     </svg>
   );

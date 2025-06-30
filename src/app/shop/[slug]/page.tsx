@@ -7,7 +7,6 @@ import CareInstructions from '@/components/CareInstructions';
 import Sustainable from '@/components/Sustainable';
 import YouMayLike from '@/components/YouMayLike';
 import ProductCarousel from '@/components/ProductCarousel';
-import BuyButton from '@/components/BuyButton';
 import MobileBuyButton from '@/components/MobileBuyButton';
 
 export function generateStaticParams() {
@@ -48,20 +47,22 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
             ))}
         </div>
 
-        <div className="product-variables mt-6 px-14 lg:px-0">
-          <p>
-            {product.dimensions.lengthCm} X {product.dimensions.widthCm} CM | {product.dimensions.thicknessMm} MM |{' '}
-            {product.dimensions.weightKg} KG
-          </p>
-          <p className="font-bold">{price}</p>
-          <Fish width={80} height={71} />
+        <div className="product-variables mt-6 flex items-end justify-between px-14 lg:px-0">
+          <div>
+            <p>
+              {product.dimensions.lengthCm} X {product.dimensions.widthCm} CM | {product.dimensions.thicknessMm} MM |{' '}
+              {product.dimensions.weightKg} KG
+            </p>
+            <p className="font-bold">{price}</p>
+          </div>
+          <Fish width={95} height={95} />
         </div>
         <MobileBuyButton product={product} />
       </section>
 
       <FeaturesAndCare className="mt-8 text-center text-black lg:mt-24 lg:grid lg:grid-cols-2 lg:pl-48 lg:text-left" />
       <CareInstructions className="mt-10 px-14 text-sm lg:m-auto lg:mt-24 lg:max-w-[707px] lg:px-0" />
-      <Sustainable className="mt-8" product={product} style={{ backgroundColor: product.bgColor }} />
+      <Sustainable className="mt-14" product={product} style={{ backgroundColor: product.bgColor }} />
       <YouMayLike />
     </div>
   );

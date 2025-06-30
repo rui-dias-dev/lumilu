@@ -7,7 +7,7 @@ import TowelsSection from '@/components/TowelsSection';
 export default function Home() {
   return (
     <>
-      <HeroSection className="my-20 md:my-0 md:mt-52" />
+      <HeroSection className="my-20 md:my-52 md:mt-52" />
       <CollectionSlider className="md:mt-28" />
       <SubscribeSection />
       <ThankYouSection />
