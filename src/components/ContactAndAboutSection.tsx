@@ -40,8 +40,8 @@ const ContactAndAboutSection = () => {
       <div className="relative lg:hidden">
         <Image alt="" src={'/images/contact/multiphoto.jpg'} width={1024} height={1278} className="h-full w-full" />
       </div>
-      <div className="px-14 py-16 text-center text-sm lg:grid lg:grid-cols-2 lg:items-center lg:px-48 lg:py-0 lg:text-left">
-        <div className="lg:mr-[137px] lg:max-w-[255px] lg:justify-self-end">
+      <div className="items-center px-[58px] py-16 text-center text-sm lg:grid lg:grid-cols-12 lg:gap-[15px] lg:px-[190px] lg:py-0 lg:text-left">
+        <div className="col-start-2 col-end-5 lg:max-w-[255px] lg:justify-self-end">
           <p>
             We’d love to hear from you! Whether you have a question about our yoga mats, need assistance with an order,
             or just want to say hello, feel free to reach out.
@@ -52,10 +52,10 @@ const ContactAndAboutSection = () => {
             </Link>
           </p>
         </div>
-        <div className="relative">
+        <div className="relative col-start-6 col-end-13 lg:h-[580px]">
           <Image
             alt=""
-            src={'/images/contact/personWithLines.png'}
+            src={'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751311357/9_opqin4.webp'}
             width={1024}
             height={1278}
             className="h-full w-full lg:max-h-[580px] lg:object-contain"

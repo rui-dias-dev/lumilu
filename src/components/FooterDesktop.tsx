@@ -20,7 +20,7 @@ const FooterDesktop: FC = ({}) => {
       <div className="grid justify-end justify-items-end">
         <div className="flex gap-3">
           <div className="grid place-items-end">
-            <Link href={'/'}>
+            <Link href={'https://www.facebook.com/profile.php?id=61574534423348'}>
               <Facebook width={46} height={46} />
             </Link>
             <Link href={'/terms-and-conditions'} className="mt-4 text-sm uppercase">
@@ -28,7 +28,9 @@ const FooterDesktop: FC = ({}) => {
             </Link>
           </div>
           <div className="grid place-items-end">
-            <Link href={'/'}>
+            <Link
+              href={'https://www.instagram.com/lumilu.eu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='}
+            >
               <Instagram width={46} height={46} />
             </Link>
             <Link href={'/about'} className="mt-4 text-sm uppercase">

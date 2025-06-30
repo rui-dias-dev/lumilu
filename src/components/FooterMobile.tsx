@@ -17,10 +17,10 @@ const FooterMobile: FC = ({}) => {
         </b>
       </p>
       <div className="flex gap-3">
-        <Link href={'/'}>
+        <Link href={'https://www.facebook.com/profile.php?id=61574534423348'}>
           <Facebook width={24} height={24} />
         </Link>
-        <Link href={'/'}>
+        <Link href={'https://www.instagram.com/lumilu.eu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='}>
           <Instagram width={24} height={24} />
         </Link>
       </div>
