@@ -20,7 +20,9 @@ const MainNav: FC = () => {
             Contact
           </Link>
         </div>
-        <Cart height={53} width={47} />
+        <Link href={'/shop'}>
+          <Cart height={53} width={47} />
+        </Link>
       </div>
     </div>
   );

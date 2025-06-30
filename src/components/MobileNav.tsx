@@ -16,7 +16,9 @@ const MobileNav: FC = () => {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <div className="flex w-full items-center justify-between px-14 lg:hidden">
-        <Cart width={25} height={25} />
+        <Link href={'/shop'}>
+          <Cart width={25} height={25} />
+        </Link>
         <Link href={'/'}>
           <Logo width={56} height={19} />
         </Link>

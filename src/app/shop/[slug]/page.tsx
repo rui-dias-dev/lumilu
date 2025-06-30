@@ -47,7 +47,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
             ))}
         </div>
 
-        <div className="product-variables mt-6 flex items-end justify-between px-14 lg:px-0">
+        <div className="product-variables mt-6 items-end justify-between px-14 lg:flex lg:px-0">
           <div>
             <p>
               {product.dimensions.lengthCm} X {product.dimensions.widthCm} CM | {product.dimensions.thicknessMm} MM |{' '}
@@ -55,7 +55,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
             </p>
             <p className="font-bold">{price}</p>
           </div>
-          <Fish width={95} height={95} />
+          <Fish className="m-auto" width={95} height={95} />
         </div>
         <MobileBuyButton product={product} />
       </section>
