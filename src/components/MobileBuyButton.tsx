@@ -11,7 +11,9 @@ interface MobileBuyButtonProps {
 
 const MobileBuyButton: FC<MobileBuyButtonProps> = ({ product }) => {
   const { width } = useWindowSize();
-  return <>{width > 0 && width < 1024 && <BuyButton product={product} className="product-buy-button lg:hidden!" />}</>;
+  return (
+    <>{width > 0 && width < 1024 && <BuyButton product={product} className="product-buy-button m-auto lg:hidden!" />}</>
+  );
 };
 
 export default MobileBuyButton;
