@@ -62,8 +62,13 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
         </CarouselContent>
       </Carousel>
 
-      <AlgarveCollection className="m-auto mt-10 text-white md:hidden" />
-      <AlgarveCollection width={425} height={45} className="m-auto mt-28 hidden text-white md:block" />
+      <Image
+        width={425}
+        height={45}
+        src={'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751359503/Algarve-collection_rreldj.webp'}
+        alt=""
+        className="m-auto mt-28 block w-[185px] text-white lg:w-[425px]"
+      />
 
       <div className="mt-4 flex w-full justify-center px-4 md:mt-12">
         <Slider
