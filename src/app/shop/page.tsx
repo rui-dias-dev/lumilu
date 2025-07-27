@@ -8,13 +8,13 @@ const ShopPage: FC = ({}) => {
       <ProductsList />
       <div className="relative h-[470px] md:h-[523px]">
         <Image
-          src={'/images/shop/algarve-collection-mobile.jpg'}
+          src={'https://res.cloudinary.com/dka4rwtwy/image/upload/v1753618010/SHOP_page-05_ybwnni.webp'}
           fill
           alt="Algarve collection"
           className="object-cover object-top md:hidden"
         />
         <Image
-          src={'/images/shop/algarve-collection.jpg'}
+          src={'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751309891/HOME_iwbh5q.webp'}
           fill
           alt="Algarve collection"
           className="hidden object-cover object-right md:inline-block"

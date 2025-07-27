@@ -61,14 +61,14 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
           ))}
         </CarouselContent>
       </Carousel>
-
-      <Image
-        width={425}
-        height={45}
-        src={'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751359503/Algarve-collection_rreldj.webp'}
-        alt=""
-        className="m-auto mt-28 block w-[185px] text-white lg:w-[425px]"
-      />
+      <div className="relative h-[31px] w-full lg:h-auto">
+        <Image
+          fill
+          src={'https://res.cloudinary.com/dka4rwtwy/image/upload/v1751359503/Algarve-collection_rreldj.webp'}
+          alt=""
+          className="h-[31px] object-contain text-white lg:h-auto lg:w-[425px]"
+        />
+      </div>
 
       <div className="mt-4 flex w-full justify-center px-4 md:mt-12">
         <Slider
@@ -77,7 +77,7 @@ const CollectionSlider: React.FC<CollectionSliderProps> = ({ className, ...props
           step={1}
           value={[progress]}
           onValueChange={onSliderChange}
-          className="h-4 w-[136px] md:h-10 md:w-[359px]"
+          className="h-5 w-[136px] md:h-10 md:w-[359px]"
         />
       </div>
     </section>

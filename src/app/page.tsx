@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <HeroSection className="my-20 md:my-52 md:mt-52" />
       <CollectionSlider className="md:mt-28" />
-      <SubscribeSection />
       <ThankYouSection />
+      <SubscribeSection />
       <TowelsSection />
     </>
   );

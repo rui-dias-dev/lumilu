@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const montserratSans = Montserrat({
   variable: '--font-montserrat-sans',
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-EBC8YLMLP3" />
       <body className={`${montserratSans.className} border-grid bg-cream flex flex-1 flex-col antialiased`}>
         <Header />
         {children}

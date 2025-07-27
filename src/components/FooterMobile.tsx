@@ -16,12 +16,12 @@ const FooterMobile: FC = ({}) => {
           Designed in Estonia
         </b>
       </p>
-      <div className="flex gap-3">
+      <div className="mt-6 flex gap-3">
         <Link href={'https://www.facebook.com/profile.php?id=61574534423348'}>
-          <Facebook width={24} height={24} />
+          <Facebook width={47} height={47} />
         </Link>
         <Link href={'https://www.instagram.com/lumilu.eu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='}>
-          <Instagram width={24} height={24} />
+          <Instagram width={47} height={47} />
         </Link>
       </div>
     </div>
