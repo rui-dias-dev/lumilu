@@ -260,4 +260,8 @@ body .sol {
       'printing image'
       'non-toxic image';
   }
+
+  .wave-desktop {
+    background-size: 100%;
+  }
 }

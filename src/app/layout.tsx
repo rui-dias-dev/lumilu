@@ -4,7 +4,8 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import PixelTracker from '@/components/PixelTracker';
+import PixelTrackerClient from '@/components/PixelTrackerClient';
+import Image from 'next/image';
 
 const montserratSans = Montserrat({
   variable: '--font-montserrat-sans',
@@ -24,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Meta Pixel Code */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -42,18 +42,18 @@ export default function RootLayout({
           }}
         />
         <noscript>
-          <img
+          <Image
+            alt=""
             height="1"
             width="1"
             style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=1510293559956799&ev=PageView&noscript=1"
           />
         </noscript>
-        {/* End Meta Pixel Code */}
       </head>
       <body className={`${montserratSans.className} border-grid bg-cream flex flex-1 flex-col antialiased`}>
         <GoogleAnalytics gaId="G-EBC8YLMLP3" />
-        <PixelTracker />
+        <PixelTrackerClient />
         <Header />
         {children}
         <Footer />
