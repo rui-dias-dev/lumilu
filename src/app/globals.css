@@ -262,6 +262,6 @@ body .sol {
   }
 
   .wave-desktop {
-    background-size: 100%;
+    background-size: contain
   }
 }
