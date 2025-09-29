@@ -19,7 +19,7 @@ export default function Home() {
           <p className="relative z-10 px-16 text-xl font-medium">Visit one of our trusted retailers</p>
         </div>
 
-        <ul className="mt-10 text-center md:grid md:grid-cols-3 md:space-y-0 md:pl-[400px] md:text-left">
+        <ul className="mt-10 space-y-12 text-center md:grid md:grid-cols-3 md:space-y-0 md:pl-[400px] md:text-left">
           {/* Portugal */}
           <li>
             <p className="text-xl font-medium">Portugal</p>
